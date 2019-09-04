@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="shortcut icon" type="image/png" href="https://images.vexels.com/media/users/3/143794/isolated/preview/dba7de0b015971549a3e50d611dd32b7-black-cat-silhouette-stretching-by-vexels.png" />
+  <title>Webcats</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+   <meta name="viewport" content="width=device-width">
+   <title>repl.it</title>
+   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width">
+     <title>repl.it</title>
+
+  <p id ="demo"></p>
+  <script>
+var webtoon = [
+    { name: 'True Beauty', image:
+    'https://swebtoon-phinf.pstatic.net/20180815_248/1534306366090Kre04_JPEG/10_EC8DB8EB84A4EC9DBC_ipad.jpg',
+    tags: ['drama', 'romance', 'slice of life', 'school life', 'comedy'],
+  link: 'https://www.webtoons.com/en/drama/truebeauty/list?title_no=1436'},
+    { name: 'unOrdinary', image:
+    'https://swebtoon-phinf.pstatic.net/20190111_246/1547145672832qC9wR_JPEG/10_EC8DB8EB84A4EC9DBC_ipad.jpg',
+    tags: ['fantasy', 'superhero', 'drama', 'school life', 'action', 'comedy', 'mystery'],
+  link: 'https://www.webtoons.com/en/fantasy/unordinary/list?title_no=679'},
+    { name: 'Bastard', image:
+    'https://swebtoon-phinf.pstatic.net/20150608_183/1433732708022aySQw_JPEG/EC8DB8EB84A4EC9DBC_ipad.jpg',
+    tags: ['thriller', 'psychological', 'school life', 'mystery', 'drama', 'tragedy', 'romance'],
+  link: 'https://www.webtoons.com/en/thriller/bastard/list?title_no=485'},
+   { name: 'Your Letter', image:
+  'https://swebtoon-phinf.pstatic.net/20190208_256/1549585925755GrbkU_JPEG/10_EC8DB8EB84A4EC9DBC_ipad.jpg',
+  tags: ['drama', 'heart-warming', 'slice of life', 'school life', 'psychological', 'mystery'],
+  link: 'https://www.webtoons.com/en/drama/your-letter/list?title_no=1540'},
+  { name: 'I Love Yoo', image:
+ 'https://swebtoon-phinf.pstatic.net/20170331_74/1490952135447r5fc5_JPEG/thumb_ipad.jpg',
+ tags: ['romance', 'drama', 'slice of life', 'school life', 'comedy'],
+ link: 'https://www.webtoons.com/en/romance/i-love-yoo/list?title_no=986'},
+ { name: 'Oh! Holy', image:
+'https://swebtoon-phinf.pstatic.net/20161011_236/1476178205242U88K7_JPEG/thumb_ipad.jpg',
+tags: ['romance', 'drama', 'supernatural', 'school life', 'comedy'],
+link: 'https://www.webtoons.com/en/romance/oh-holy/list?title_no=809'},
+{ name: 'Refund High School', image:
+'https://swebtoon-phinf.pstatic.net/20190613_90/1560396220757zmrMc_JPEG/bbbb.jpg',
+tags: ['drama', 'romance', 'fantasy', 'school life', 'comedy'],
+link: 'https://www.webtoons.com/en/drama/refundhighschool/list?title_no=1360'},
+{ name: 'Rise from Ashes', image:
+'https://swebtoon-phinf.pstatic.net/20170303_190/1488519294132H1GID_JPEG/thumb_ipad.jpg',
+tags: ['fantasy', 'supernatural', 'drama', 'action', 'adventure'],
+link: 'https://www.webtoons.com/en/fantasy/rise-from-ashes/list?title_no=959'},
+{ name: 'Space Boy', image:
+'https://swebtoon-phinf.pstatic.net/20160603_23/1464921569341urcxL_JPEG/EC8DB8EB84A4EC9DBC_ipad.jpg',
+tags: ['drama', 'romance', 'heart-warming', 'sci-fi', 'adventure', 'school life'],
+link: 'https://www.webtoons.com/en/drama/space-boy/list?title_no=400'},
+{ name: 'Hooky', image:
+'https://swebtoon-phinf.pstatic.net/20180719_60/153196277819642SlL_JPEG/10_EC8DB8EB84A4EC9DBC_ipad.jpg',
+tags: ['fantasy', 'romance', 'heart-warming', 'comedy', 'adventure', 'drama'],
+link: 'https://www.webtoons.com/en/fantasy/hooky/list?title_no=425'},
+{ name: 'Phantom Paradise', image:
+'https://swebtoon-phinf.pstatic.net/20171214_238/1513231193339ltyyB_JPEG/10_EC8DB8EB84A4EC9DBC_ipad.jpg',
+tags: ['fantasy', 'supernatural', 'adventure', 'drama', 'action'],
+link: 'https://www.webtoons.com/en/fantasy/phantom-paradise/list?title_no=1250'},
+{ name: 'Lookism', image:
+'https://swebtoon-phinf.pstatic.net/20170530_183/1496138222148Nv1Cw_JPEG/thumb_ipad.jpg',
+tags: ['drama', 'supernatural', 'school life', 'comedy', 'action', 'slice of life'],
+link: 'https://www.webtoons.com/en/drama/lookism/list?title_no=1049'},
+{ name: 'Lore Olympus', image:
+'https://swebtoon-phinf.pstatic.net/20180302_224/1519958722804cbKwp_JPEG/10_EC8DB8EB84A4EC9DBC_ipad.jpg',
+tags: ['romance', 'drama', 'fantasy', 'comedy', 'historical'],
+link: 'https://www.webtoons.com/en/romance/lore-olympus/list?title_no=1320'},
+{ name: "Siren's Lament", image:
+'https://swebtoon-phinf.pstatic.net/20160408_102/14600813659697spkc_JPEG/EC8DB8EB84A4EC9DBC_ipad.jpg',
+tags: ['romance', 'drama', 'fantasy', 'comedy', 'mystery'],
+link: 'https://www.webtoons.com/en/romance/sirens-lament/list?title_no=632'},
+{ name: 'Freaking Romance', image:
+'https://swebtoon-phinf.pstatic.net/20181021_182/1540083305114w2ymk_JPEG/10_EC8DB8EB84A4EC9DBC_ipad.jpg',
+tags: ['romance', 'drama', 'fantasy', 'comedy', 'mystery', 'supernatural'],
+link: 'https://www.webtoons.com/en/romance/freaking-romance/list?title_no=1467'},
+{ name: 'Cheese in the Trap', image:
+'https://swebtoon-phinf.pstatic.net/20151006_25/14441248286848nLRw_JPEG/_EB93BBEB80AF_EBA38CEABCA5_E29587EABCB1_EB9384EB84B0_ipa.jpg',
+tags: ['romance', 'drama', 'mystery', 'comedy', 'slice of life', 'school life', 'psychological'],
+link: 'https://www.webtoons.com/en/romance/cheese-in-the-trap/list?title_no=99'},
+{ name: 'Castle Swimmer', image:
+'https://swebtoon-phinf.pstatic.net/20181218_245/1545092365232CyuWb_JPEG/10_EC8DB8EB84A4EC9DBC_ipad.jpg',
+tags: ['fantasy', 'drama', 'romance', 'comedy', 'LGBT', 'heart-warming', 'adventure'],
+link: 'https://www.webtoons.com/en/fantasy/castle-swimmer/list?title_no=1499'},
+{ name: 'Aerial Magic', image:
+'https://swebtoon-phinf.pstatic.net/20190220_283/15506073578105E6zm_JPEG/10_EC8DB8EB84A4EC9DBC_ipad.jpg',
+tags: ['drama', 'fantasy', 'romance', 'LGBT', 'heart-warming'],
+link: 'https://www.webtoons.com/en/drama/aerial-magic/list?title_no=1358'},
+{ name: 'SubZero', image:
+'https://swebtoon-phinf.pstatic.net/20181022_300/1540173096133NHuNf_JPEG/10_EC8DB8EB84A4EC9DBC_ipad.jpg',
+tags: ['romance', 'drama', 'fantasy', 'historical'],
+link: 'https://www.webtoons.com/en/romance/subzero/list?title_no=1468'},
+{ name: 'Odd Girl Out', image:
+'https://swebtoon-phinf.pstatic.net/20180712_38/1531333119082GcnSx_JPEG/10_EC8DB8EB84A4EC9DBC_ipad.jpg',
+tags: ['drama', 'slice of life', 'comedy', 'school life', 'heart-warming'],
+link: 'https://www.webtoons.com/en/drama/odd-girl-out/list?title_no=1420'},
+{ name: 'Spirit Fingers', image:
+'https://swebtoon-phinf.pstatic.net/20190402_16/1554160225388Mx6yL_JPEG/10_EC8DB8EB84A4EC9DBC_ipad.jpg',
+tags: ['drama', 'slice of life', 'comedy', 'school life', 'romance'],
+link: 'https://www.webtoons.com/en/drama/spirit-fingers/list?title_no=1577'},
+{ name: 'Purple Hyacinth', image:
+'https://swebtoon-phinf.pstatic.net/20190522_118/1558463010991CibkK_JPEG/10_EC8DB8EB84A4EC9DBC_ipad.jpg',
+tags: ['drama', 'mystery', 'romance', 'tragedy', 'psychological', 'action'],
+link: 'https://www.webtoons.com/en/drama/purple-hyacinth/list?title_no=1621'},
+{ name: 'Winter Moon', image:
+'https://swebtoon-phinf.pstatic.net/20190608_69/1559945856540uag7s_JPEG/10_EC8DB8EB84A4EC9DBC_ipad.jpg',
+tags: ['fantasy', 'drama', 'adventure', 'action', 'psychological', 'LGBT'],
+link: 'https://www.webtoons.com/en/fantasy/winter-moon/list?title_no=1093'},
+{ name: 'A Good Day to be a Dog', image:
+'https://swebtoon-phinf.pstatic.net/20180627_126/1530072185130JQkS8_JPEG/10_EC8DB8EB84A4EC9DBC_ipad.jpg',
+tags: ['drama', 'romance', 'supernatural', 'comedy'],
+link: 'https://www.webtoons.com/en/drama/a-good-day-tobe-a-dog/list?title_no=1390'},
+{ name: 'Rebirth', image:
+'https://swebtoon-phinf.pstatic.net/20181026_50/1540502090211TQ4tw_JPEG/10_EC8DB8EB84A4EC9DBC_ipad+28329.jpg',
+tags: ['fantasy', 'thriller', 'supernatural', 'adventure', 'psychological'],
+link: 'https://www.webtoons.com/en/fantasy/rebirth/list?title_no=1412'},
+{ name: "Yumi's Cells", image:
+'https://swebtoon-phinf.pstatic.net/20190326_270/1553553521592eU1gw_JPEG/10_EC8DB8EB84A4EC9DBC_ipad.jpg',
+tags: ['romance', 'comedy', 'drama', 'slice of life'],
+link: 'https://www.webtoons.com/en/romance/yumi-cell/list?title_no=478'},
+{ name: 'My Giant Nerd Boyfriend', image:
+'https://swebtoon-phinf.pstatic.net/20170306_264/1488766827554pdwF8_JPEG/thumb_ipad.jpg',
+tags: ['slice of life', 'comedy', 'heart-warming'],
+link: 'https://www.webtoons.com/en/slice-of-life/my-giant-nerd-boyfriend/list?title_no=958'},
+{ name: 'Cape of Spirits', image:
+'https://swebtoon-phinf.pstatic.net/20190306_4/1551841448913DIbTJ_JPEG/PC+Thumbnail.jpg',
+tags: ['fantasy', 'action', 'adventure'],
+link: 'https://www.webtoons.com/en/fantasy/cape-of-spirits/list?title_no=1559'},
+{ name: 'Bluechair', image:
+'https://swebtoon-phinf.pstatic.net/20180704_72/1530671398892KGNLr_JPEG/10_EC8DB8EB84A4EC9DBC_ipad.jpg',
+tags: ['comedy', 'slice of life'],
+link: 'https://www.webtoons.com/en/comedy/bluechair/list?title_no=199'},
+{ name: 'Brutally Honest', image:
+'https://swebtoon-phinf.pstatic.net/20161005_176/1475635494730slUhn_JPEG/Thumb_ipad.jpg',
+tags: ['comedy', 'slice of life'],
+link: 'https://www.webtoons.com/en/comedy/brutally-honest/list?title_no=799'},
+{ name: 'Annarasumanara', image:
+'https://swebtoon-phinf.pstatic.net/20141219_290/1418975761885jd8W0_JPEG/16_EC9588EB8298EB9DBCEC8898EBA788EB8298EB9DBC.jpg',
+tags: ['drama', 'slice of life', 'psychological', 'school life', 'tragedy', 'romance'],
+link: 'https://www.webtoons.com/en/drama/annarasumanara/list?title_no=77'},
+{ name: 'unTouchable', image:
+'https://swebtoon-phinf.pstatic.net/20140710_240/1404980084194ATjbR_JPEG/19_EC96B8ED84B0ECB298EBB894.jpg',
+tags: ['romance', 'comedy', 'fantasy', 'supernatural', 'drama'],
+link: 'https://www.webtoons.com/en/romance/untouchable/list?title_no=79'},
+{ name: 'Winter Woods', image:
+'http://swebtoon.phinf.naver.net/20160108_225/1452239317218TkAKm_JPEG/EC8DB8EB84A4EC9DBC_ipad.jpg',
+tags: ['romance', 'supernatural', 'drama', 'heart-warming'],
+link: 'https://www.webtoons.com/en/romance/winter-woods/list?title_no=344'},
+{ name: 'Noblesse', image:
+'https://swebtoon-phinf.pstatic.net/20151006_104/1444124999947bsohP_JPEG/_EB93BBEB80AF_EBA38CEABCA5_E29587EABCB1_EB9384EB84B0_ipa.jpg',
+tags: ['fantasy', 'action', 'supernatural', 'drama', 'school life'],
+link: 'https://www.webtoons.com/en/fantasy/noblesse/list?title_no=87'},
+{ name: "Girls of the Wild's", image:
+'https://swebtoon-phinf.pstatic.net/20151006_241/1444125101115PlPOi_JPEG/_EB93BBEB80AF_EBA38CEABCA5_E29587EABCB1_EB9384EB84B0_ipa.jpg',
+tags: ['action', 'comedy', 'sports', 'drama', 'school life', 'romance'],
+link: 'https://www.webtoons.com/en/action/girls-of-the-wilds/list?title_no=93'},
+{ name: 'Witch Hunt', image:
+'https://swebtoon-phinf.pstatic.net/20141210_165/14182165154882qhgh_JPEG/EC8DB8EB84A4EC9DBC_ipad.jpg',
+tags: ['drama', 'fantasy', 'supernatural', 'school life'],
+link: 'https://www.webtoons.com/en/drama/witch-hunt/list?title_no=363'},
+{ name: 'Super Secret', image:
+'https://swebtoon-phinf.pstatic.net/20160429_118/1461910588239SLc71_JPEG/EC8DB8EB84A4EC9DBC_ipad.jpg',
+tags: ['romance', 'comedy', 'supernatural', 'drama'],
+link: 'https://www.webtoons.com/en/romance/super-secret/list?title_no=666'},
+{ name: 'My Boo', image:
+'https://swebtoon-phinf.pstatic.net/20171001_228/1506830853742XOhwN_JPEG/10_EC8DB8EB84A4EC9DBC_ipad.jpg',
+tags: ['drama', 'psychological', 'supernatural', 'romance', 'tragedy'],
+link: 'https://www.webtoons.com/en/drama/my-boo/list?title_no=1185'},
+{ name: 'SAVE ME', image:
+'https://swebtoon-phinf.pstatic.net/20190116_203/15476092508381Ywkd_JPEG/10_ipad.jpg',
+tags: ['drama', 'psychological', 'supernatural', 'tragedy'],
+link: 'https://www.webtoons.com/en/drama/bts-save-me/list?title_no=1514'},
+{ name: 'Unknown Caller', image:
+'https://swebtoon-phinf.pstatic.net/20161012_266/1476248319893JTlgz_JPEG/thumb_ipad.jpg',
+tags: ['thriller', 'horror', 'psychological', 'supernatural', 'tragedy'],
+link: 'https://www.webtoons.com/en/thriller/ar-toon/list?title_no=775'},
+{ name: 'Shriek', image:
+'https://swebtoon-phinf.pstatic.net/20160920_105/1474357227248NeN9C_JPEG/EC8DB8EB84A4EC9DBC_ipad.jpg',
+tags: ['thriller', 'horror', 'psychological', 'supernatural', 'tragedy'],
+link: 'https://www.webtoons.com/en/thriller/shriek/list?title_no=772'},
+{ name: 'A Bitterweet Life', image:
+'https://swebtoon-phinf.pstatic.net/20140922_43/1411355171178Y4Ike_JPEG/pad_thumb.jpg',
+tags: ['slice of life', 'comedy', 'romance'],
+link: 'https://www.webtoons.com/en/slice-of-life/a-bittersweet-life/list?title_no=294'},
+{ name: 'Adventures of God', image:
+'https://swebtoon-phinf.pstatic.net/20170502_80/1493715267628Gz02K_JPEG/thumb_ipad.jpg',
+tags: ['comedy', 'supernatural'],
+link: 'https://www.webtoons.com/en/comedy/adventures-of-god/list?title_no=853'},
+{ name: 'Mage & Demon Queen', image:
+'https://swebtoon-phinf.pstatic.net/20180821_187/1534817578859RBWsk_JPEG/10_EC8DB8EB84A4EC9DBC_ipad.jpg',
+tags: ['fantasy', 'romance', 'comedy', 'LGBT'],
+link: 'https://www.webtoons.com/en/fantasy/mage-and-demon-queen/list?title_no=1438'},
+{ name: 'Miss Abbott and the Doctor', image:
+'https://swebtoon-phinf.pstatic.net/20160710_116/1468117411604PAiy0_JPEG/thumb_ipad.jpg',
+tags: ['romance', 'historical', 'comedy', 'heart-warming'],
+link: 'https://www.webtoons.com/en/romance/miss-abbott-and-the-doctor/list?title_no=707'},
+{ name: 'Love Advice from the Great Duke of Hell', image:
+'https://swebtoon-phinf.pstatic.net/20190726_139/1564102680119LAbQJ_JPEG/mail.navercorp-2.jpg',
+tags: ['comedy', 'romance', 'supernatural'],
+link: 'https://www.webtoons.com/en/comedy/love-advice/list?title_no=1498'},
+{ name: 'LUMINE', image:
+'https://swebtoon-phinf.pstatic.net/20170426_243/1493184396827gizNx_JPEG/thumb_ipad.jpg',
+tags: ['drama', 'adventure', 'fantasy', 'heart-warming', 'action', 'supernatural'],
+link: 'https://www.webtoons.com/en/drama/lumine/list?title_no=1022'},
+{ name: 'Boyfriend of the Dead', image:
+'https://swebtoon-phinf.pstatic.net/20170713_200/1499904163591gjxpL_JPEG/10_EC8DB8EB84A4EC9DBC_ipad.jpg',
+tags: ['comedy', 'romance', 'drama', 'action', 'supernatural'],
+link: 'https://www.webtoons.com/en/comedy/boyfriend-of-the-dead/list?title_no=1102'},
+{ name: 'LUFF', image:
+'https://swebtoon-phinf.pstatic.net/20181212_278/1544567499942F60ug_JPEG/10_EC8DB8EB84A4EC9DBC_ipad.jpg',
+tags: ['romance', 'comedy', 'drama', 'slice of life'],
+link: 'https://www.webtoons.com/en/romance/luff/list?title_no=1489'},
+{ name: 'Cursed Princess Club', image:
+'https://swebtoon-phinf.pstatic.net/20190226_224/1551120711003gUe7B_JPEG/10_EC8DB8EB84A4EC9DBC_ipad.jpg',
+tags: ['comedy', 'fantasy', 'heartwarming'],
+link: 'https://www.webtoons.com/en/comedy/cursed-princess-club/list?title_no=1537'},
+{ name: 'The Gamer', image:
+'https://swebtoon-phinf.pstatic.net/20140814_112/1407995018570pf1Yj_JPEG/28_EB8D94EAB28CEC9DB4EBA8B8.jpg',
+tags: ['fantasy', 'action', 'adventure', 'comedy', 'school life', 'supernatural'],
+link: 'https://www.webtoons.com/en/fantasy/the-gamer/list?title_no=88'},
+{ name: 'The Red King', image:
+'https://swebtoon-phinf.pstatic.net/20190725_17/1564005175416DA6j4_JPEG/10_EC8DB8EB84A4EC9DBC_ipad.jpg',
+tags: ['fantasy', 'action', 'supernatural'],
+link: 'https://www.webtoons.com/en/fantasy/the-#8b0000-king/list?title_no=1687'},
+{ name: 'Everywhere & Nowhere', image:
+'https://swebtoon-phinf.pstatic.net/20190409_171/1554772500147UIzPW_JPEG/10_EC8DB8EB84A4EC9DBC_ipad.jpg',
+tags: ['comedy', 'historical', 'sci-fi', 'adventure', 'school life'],
+link: 'https://www.webtoons.com/en/comedy/everywhere-and-nowhere/list?title_no=1598'},
+{ name: 'Murrz', image:
+'https://swebtoon-phinf.pstatic.net/20180111_132/1515611525821hfVcF_JPEG/10_EC8DB8EB84A4EC9DBC_ipad.jpg',
+tags: ['slice of life', 'comedy'],
+link: 'https://www.webtoons.com/en/slice-of-life/murrz/list?title_no=1281'},
+{ name: 'Small World', image:
+'https://swebtoon-phinf.pstatic.net/20180518_231/1526595968262TpOmz_JPEG/10_EC8DB8EB84A4EC9DBC_ipad.jpg',
+tags: ['slice of life', 'LGBT', 'heart-warming'],
+link: 'https://www.webtoons.com/en/slice-of-life/small-world/list?title_no=1159'},
+{ name: 'Saphie: The One-Eyed Cat', image:
+'https://swebtoon-phinf.pstatic.net/20180321_100/1521588183220LTI4v_JPEG/10_EC8DB8EB84A4EC9DBC_ipad.jpg',
+tags: ['slice of life', 'comedy', 'heart-warming'],
+link: 'https://www.webtoons.com/en/slice-of-life/saphie-one-eyed-cat/list?title_no=670'},
+{ name: 'Sweet Home', image:
+'https://swebtoon-phinf.pstatic.net/20180115_46/1515982322405V9H8X_JPEG/10_EC8DB8EB84A4EC9DBC_ipad.jpg',
+tags: ['thriller', 'action', 'drama', 'psychological', 'supernatural', 'horror'],
+link: 'https://www.webtoons.com/en/thriller/sweethome/list?title_no=1285'},
+{ name: 'Room of Swords', image:
+'https://swebtoon-phinf.pstatic.net/20190620_190/1560979180670dvk8Y_JPEG/10_EC8DB8EB84A4EC9DBC_ipad.jpg',
+tags: ['sci-fi', 'mystery', 'action', 'fantasy', 'supernatural'],
+link: 'https://www.webtoons.com/en/sf/room-of-swords/list?title_no=1261'},
+{ name: 'Matchmaker Hero', image:
+'https://swebtoon-phinf.pstatic.net/20190321_177/1553124584763IGRIi_JPEG/10_EC8DB8EB84A4EC9DBC_ipad.jpg',
+tags: ['sci-fi', 'adventure', 'action', 'drama', 'comedy', 'superhero'],
+link: 'https://www.webtoons.com/en/sf/matchmaker-hero/list?title_no=1569'},
+{ name: 'Uriah', image:
+'https://swebtoon-phinf.pstatic.net/20190418_225/1555552689264oEP0I_JPEG/10_EC8DB8EB84A4EC9DBC_ipad.jpg',
+tags: ['thriller', 'mystery', 'adventure', 'horror'],
+link: 'https://www.webtoons.com/en/thriller/uriah/list?title_no=1607'},
+{ name: 'Shiloh', image:
+'https://swebtoon-phinf.pstatic.net/20190629_251/1561769305183XkII1_JPEG/10_EC8DB8EB84A4EC9DBC_ipad28129.jpg',
+tags: ['thriller', 'adventure', 'horror'],
+link: 'https://www.webtoons.com/en/thriller/shiloh/list?title_no=1649'},
+{ name: 'My Deepest Secret', image:
+'https://swebtoon-phinf.pstatic.net/20190426_80/1556214834059BekxV_JPEG/10_EC8DB8EB84A4EC9DBC_ipad.jpg',
+tags: ['drama', 'romance', 'psychological'],
+link: 'https://www.webtoons.com/en/drama/my-deepest-secret/list?title_no=1580'},
+{ name: 'Ghost Wife', image:
+'https://swebtoon-phinf.pstatic.net/20181026_223/1540517103219JIDOO_JPEG/10_EC8DB8EB84A4EC9DBC_ipad.jpg',
+tags: ['romance', 'drama', 'supernatural', 'horror'],
+link: 'https://www.webtoons.com/en/romance/ghost-wife/list?title_no=1471'},
+{ name: 'Waffles & Pancakes', image:
+'https://swebtoon-phinf.pstatic.net/20180213_288/15184904324239KqQv_JPEG/10_EC8DB8EB84A4EC9DBC_ipad.jpg',
+tags: ['slice of life', 'comedy'],
+link: 'https://www.webtoons.com/en/slice-of-life/waffles-and-pancakes/list?title_no=1310'},
+{ name: 'Days of Hana', image:
+'https://swebtoon-phinf.pstatic.net/20171204_282/1512362397048j7xOo_JPEG/10_EC8DB8EB84A4EC9DBC_ipad.jpg',
+tags: ['romance', 'comedy', 'fantasy', 'school life', 'supernatural', 'tragedy', 'drama'],
+link: 'https://www.webtoons.com/en/romance/days-of-hana/list?title_no=1246'},
+{ name: 'Scorching Romance', image:
+'https://swebtoon-phinf.pstatic.net/20190629_192/1561742432221Exf46_JPEG/10_EC8DB8EB84A4EC9DBC_ipad.jpg',
+tags: ['drama', 'comedy', 'romance', 'school life'],
+link: 'https://www.webtoons.com/en/drama/scorching-romance/list?title_no=1662'},
+{ name: 'Orange Marmalade', image:
+'https://swebtoon-phinf.pstatic.net/20140710_186/1404979009249BDvE6_JPEG/25_EC98A4EBA08CECA780EBA788EBA790EBA088EC9DB4EB939C.jpg',
+tags: ['romance', 'comedy', 'drama', 'school life', 'supernatural'],
+link: 'https://www.webtoons.com/en/romance/orange-marmalade/list?title_no=97'},
+{ name: 'Meow Man', image:
+'https://swebtoon-phinf.pstatic.net/20190717_102/15633168940672j4U6_JPEG/10_EC8DB8EB84A4EC9DBC_ipad.jpg',
+tags: ['comedy', 'fantasy', 'romance'],
+link: 'https://www.webtoons.com/en/comedy/meow-man/list?title_no=1677'},
+{ name: 'Salty Studio', image:
+'https://swebtoon-phinf.pstatic.net/20140710_245/1404980269279mLVYA_JPEG/37_EC8AA4ED8A9CEB9494EC98A4ECA7ADECAABCEBA684.jpg',
+tags: ['romance', 'comedy', 'slice of life'],
+link: 'https://www.webtoons.com/en/romance/salty-studio/list?title_no=74'},
+{ name: 'Little Matcha Girl', image:
+'https://swebtoon-phinf.pstatic.net/20190709_248/15626125793758FA8m_JPEG/10_EC8DB8EB84A4EC9DBC_ipad.jpg',
+tags: ['fantasy', 'comedy', 'adventure'],
+link: 'https://www.webtoons.com/en/fantasy/little-matcha-girl/list?title_no=1665'},
+{ name: 'Age Matters', image:
+'https://swebtoon-phinf.pstatic.net/20180421_269/1524270316069kkN5z_JPEG/10_EC8DB8EB84A4EC9DBC_ipad.jpg',
+tags: ['romance', 'comedy', 'drama', 'slice of life'],
+link: 'https://www.webtoons.com/en/romance/age-matters/list?title_no=1364'},
+{ name: 'As Per Usual', image:
+'https://swebtoon-phinf.pstatic.net/20160408_69/14600810644658piWH_JPEG/10_EC8DB8EB84A4EC9DBC_ipad.jpg',
+tags: ['comedy', 'slice of life'],
+link: 'https://www.webtoons.com/en/comedy/as-per-usual/list?title_no=599'},
+{ name: 'My Dear Cold-Blooded King', image:
+'https://swebtoon-phinf.pstatic.net/20170313_41/1489365137158VXuOI_JPEG/thumb_ipad.jpg',
+tags: ['romance', 'drama', 'historical', 'fantasy', 'action'],
+link: 'https://www.webtoons.com/en/romance/my-dear-cold-blooded-king/list?title_no=961'},
+{ name: 'The Kiss Bet', image:
+'https://swebtoon-phinf.pstatic.net/20190515_240/1557857972657PQQsQ_JPEG/10_EC8DB8EB84A4EC9DBC_ipad.jpg',
+tags: ['romance', 'comedy', 'school life', 'slice of life', 'drama'],
+link: 'https://www.webtoons.com/en/romance/the-kiss-bet/list?title_no=1617'},
+{ name: 'Random Chat', image:
+'https://swebtoon-phinf.pstatic.net/20190711_251/15628066307681VRjT_JPEG/10_EC8DB8EB84A4EC9DBC_ipad.jpg',
+tags: ['drama', 'comedy', 'school life', 'slice of life', 'romance'],
+link: 'https://www.webtoons.com/en/drama/random-chat/list?title_no=1669'},
+{ name: 'Witch Creek Road', image:
+'https://swebtoon-phinf.pstatic.net/20180920_44/1537406679779HB1RG_JPEG/10_EC8DB8EB84A4EC9DBC_ipad.jpg',
+tags: ['horror', 'supernatural', 'action', 'tragedy', 'thriller'],
+link: 'https://www.webtoons.com/en/horror/witch-creek-road/list?title_no=1453'},
+{ name: 'House of Stars', image:
+'https://swebtoon-phinf.pstatic.net/20190517_163/1558050091514Yov2i_JPEG/10_EC8DB8EB84A4EC9DBC_ipad.jpg',
+tags: ['fantasy', 'adventure', 'drama', 'heart-warming'],
+link: 'https://www.webtoons.com/en/fantasy/house-of-stars/list?title_no=1620'},
+{ name: 'Seed', image:
+'https://swebtoon-phinf.pstatic.net/20181116_6/1542312178930exMAj_JPEG/10_EC8DB8EB84A4EC9DBC_ipad.jpg',
+tags: ['sci-fi', 'school life', 'mystery', 'drama'],
+link: 'https://www.webtoons.com/en/sf/seed/list?title_no=1480'},
+{ name: "Let's Play", image:
+'https://swebtoon-phinf.pstatic.net/20181027_97/1540607726592E7A2f_JPEG/10_EC8DB8EB84A4EC9DBC_ipad.jpg',
+tags: ['romance', 'drama', 'comedy', 'slice of life'],
+link: 'https://www.webtoons.com/en/romance/letsplay/list?title_no=1218'},
+{ name: 'Eggnoid', image:
+'https://swebtoon-phinf.pstatic.net/20171111_229/1510374560826ufI8i_JPEG/10_EC8DB8EB84A4EC9DBC_ipad.jpg',
+tags: ['romance', 'drama', 'fantasy', 'school life'],
+link: 'https://www.webtoons.com/en/romance/eggnoid/list?title_no=1229'},
+{ name: 'Always Human', image:
+'https://swebtoon-phinf.pstatic.net/20160805_218/1470383200765Rep0D_JPEG/EC8DB8EB84A4EC9DBC_ipad.jpg',
+tags: ['romance', 'drama', 'LGBT', 'sci-fi'],
+link: 'https://www.webtoons.com/en/romance/always-human/list?title_no=557'},
+{ name: 'For the Sake of Sita', image:
+'https://swebtoon-phinf.pstatic.net/20141124_45/1416791867320kyxA7_JPEG/thumb.jpg',
+tags: ['romance', 'drama', 'fantasy', 'supernatural', 'heart-warming'],
+link: 'https://www.webtoons.com/en/romance/for-the-sake-of-sita/list?title_no=349'},
+{ name: 'The Stories of Those Around Me', image:
+'https://swebtoon-phinf.pstatic.net/20140710_31/1404979622903Ok5QO_JPEG/32_EC9584EB8A94EC82ACEB9E8CEC9DB4EC95BCEAB8B0.jpg',
+tags: ['romance', 'comedy', 'slice of life'],
+link: 'https://www.webtoons.com/en/romance/the-stories-of-those-around-me/list?title_no=96'},
+{ name: 'Ghost Teller', image:
+'https://swebtoon-phinf.pstatic.net/20180209_117/1518136726824CCRt8_JPEG/10_EC8DB8EB84A4EC9DBC_ipad.jpg',
+tags: ['horror', 'drama', 'mystery', 'psychological', 'supernatural'],
+link: 'https://www.webtoons.com/en/horror/ghost-teller/list?title_no=1307'},
+{ name: 'Tower of God', image:
+'https://swebtoon-phinf.pstatic.net/20190318_291/1552868599909GoVLY_JPEG/10_EC8DB8EB84A4EC9DBC_ipad.jpg',
+tags: ['fantasy', 'action', 'adventure', 'comedy', 'drama', 'mystery', 'supernatural'],
+link: 'https://www.webtoons.com/en/fantasy/tower-of-god/list?title_no=95'},
+{ name: 'Deor', image:
+'https://swebtoon-phinf.pstatic.net/20190702_222/1562021366038KBkoL_JPEG/10_EC8DB8EB84A4EC9DBC_ipad.jpg',
+tags: ['fantasy', 'action', 'supernatural'],
+link: 'https://www.webtoons.com/en/fantasy/deor/list?title_no=1663'},
+{ name: 'Hardcore Leveling Warrior', image:
+'https://swebtoon-phinf.pstatic.net/20171107_238/1510025749731kzNvF_JPEG/10_EC8DB8EB84A4EC9DBC_ipad.jpg',
+tags: ['action', 'comedy', 'drama', 'fantasy'],
+link: 'https://www.webtoons.com/en/action/hardcore-leveling-warrior/list?title_no=1221'},
+{ name: 'The God of High School', image:
+'https://swebtoon-phinf.pstatic.net/20151006_28/1444125202650lRKQJ_JPEG/_EB93BBEB80AF_EBA38CEABCA5_E29587EABCB1_EB9384EB84B0_ipa.jpg',
+tags: ['action', 'comedy', 'adventure', 'fantasy', 'sci-fi', 'supernatural'],
+link: 'https://www.webtoons.com/en/action/the-god-of-high-school/list?title_no=66'},
+{ name: 'Edith', image:
+'https://swebtoon-phinf.pstatic.net/20190201_270/15489794733050z4Lm_JPEG/10_EC8DB8EB84A4EC9DBC_ipad.jpg',
+tags: ['romance', 'drama', 'slice of life'],
+link: 'https://www.webtoons.com/en/romance/edith/list?title_no=1536'},
+{ name: 'Devil Number 4', image:
+'https://swebtoon-phinf.pstatic.net/20190808_77/1565218649854SDRJO_JPEG/10_EC8DB8EB84A4EC9DBC_ipad.jpg',
+tags: ['romance', 'fantasy', 'mystery', 'supernatural'],
+link: 'https://www.webtoons.com/en/romance/devil-no-4/list?title_no=1695'},
+{ name: 'AXED', image:
+'https://swebtoon-phinf.pstatic.net/20190306_196/1551837961571vJfqU_JPEG/10_EC8DB8EB84A4EC9DBC_ipad.jpg',
+tags: ['comedy', 'fantasy', 'slice of life'],
+link: 'https://www.webtoons.com/en/comedy/axed/list?title_no=1558'},
+{ name: 'Live With Yourself!', image:
+'https://swebtoon-phinf.pstatic.net/20190126_164/1548461547667YEsa7_JPEG/10_EC8DB8EB84A4EC9DBC_ipad.jpg',
+tags: ['comedy', 'slice of life'],
+link: 'https://www.webtoons.com/en/comedy/live-with-yourself/list?title_no=919'},
+{ name: "DON'T HATE", image:
+'https://swebtoon-phinf.pstatic.net/20190330_84/15538953371230QIsF_JPEG/10_EC8DB8EB84A4EC9DBC_ipad.jpg',
+tags: ['comedy', 'fantasy', 'slice of life'],
+link: 'https://www.webtoons.com/en/comedy/dont-hate/list?title_no=1574'},
+{ name: 'Doodle for Food', image:
+'https://swebtoon-phinf.pstatic.net/20160408_150/1460081140645k8eFk_JPEG/EC8DB8EB84A4EC9DBC_ipad.jpg',
+tags: ['slice of life', 'comedy'],
+link: 'https://www.webtoons.com/en/slice-of-life/doodle-for-food/list?title_no=487'},
+{ name: 'Just for Kicks', image:
+'https://swebtoon-phinf.pstatic.net/20170830_230/1504044632747vTI39_JPEG/10_EC8DB8EB84A4EC9DBC_ipad.jpg',
+tags: ['slice of life', 'comedy', 'sports', 'heart-warming'],
+link: 'https://www.webtoons.com/en/slice-of-life/just-for-kicks/list?title_no=1152'},
+{ name: 'My Name is Benny', image:
+'https://swebtoon-phinf.pstatic.net/20180110_158/1515530588304ps4Ow_JPEG/10_EC8DB8EB84A4EC9DBC_ipad.jpg',
+tags: ['slice of life', 'comedy'],
+link: 'https://www.webtoons.com/en/slice-of-life/my-name-is-benny/list?title_no=1279'},
+{ name: 'Cat Loaf Adventures', image:
+'https://swebtoon-phinf.pstatic.net/20180513_146/1526169942115EJ4oV_JPEG/10_EC8DB8EB84A4EC9DBC_ipad.jpg',
+tags: ['slice of life', 'comedy', 'heart-warming'],
+link: 'https://www.webtoons.com/en/slice-of-life/cat-loaf-adventures/list?title_no=1381'},
+{ name: 'Eleceed', image:
+'https://swebtoon-phinf.pstatic.net/20190327_47/1553622934559hpwGp_JPEG/10_EC8DB8EB84A4EC9DBC_ipad.jpg',
+tags: ['fantasy', 'comedy', 'action', 'supernatural'],
+link: 'https://www.webtoons.com/en/fantasy/eleceed/list?title_no=1571'},
+{ name: 'Bad Signs', image:
+'https://swebtoon-phinf.pstatic.net/20190521_149/1558395589657LruRb_JPEG/10_EC8DB8EB84A4EC9DBC_ipad.jpg',
+tags: ['comedy', 'drama'],
+link: 'https://www.webtoons.com/en/comedy/bad-signs/list?title_no=1623'},
+];
+
+
+
+</script>
+
+<style>
+* {box-sizing: border-box}
+
+/* Set height of body and the document to 100% */
+/* Style tab links */
+.headerStuff{
+  font-size:50px;
+  line-height:60px;
+  font-weight: bold;
+  color:#5d5d5d;
+
+}
+.quizHeader{
+  font-size: 16px;
+  margin-right:25px;
+  color:#8b0000;
+  font-weight: bold;
+}
+.tablink {
+  background-color: #8b0000;
+  color: #f6f6f6;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 15px;
+  font-family: arial;
+  width: 25%;
+}
+ .label:active{
+  font-weight: bold;
+  color:#8b0000;
+}
+.submitButton{
+  background: #8b0000;
+  color:#f6f6f6;
+  font-family:arial;
+  padding:6px 12px;
+  font-weight: bold;
+}
+.tablink:hover {
+  background-color: #5d5d5d;
+  color:#8b0000
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  padding: 100px 20px;
+}
+.content{
+  overflow: hidden;
+}
+.searchButton{
+  padding:5px 70px 5px 9px;
+  border:0;
+  font:13px arial;
+  letter-spacing: 1px;
+  border:solid 1px #5d5d5d;
+}
+
+#Webcats {background-color: #f6f6f6;}
+#TrySomethingNew {background-color: #f6f6f6;}
+#WebtoonQuiz {background-color: #f6f6f6;}
+#WhatShouldYouRead {background-color: #f6f6f6;}
+button{
+  padding:0;
+  border:0;
+}
+div{
+  font-family:arial ;
+  font-size:15px;
+  line-height: 20px;
+  letter-spacing: 1px;
+  color:#5d5d5d;
+  text-align: justify;
+  transition: 0.5s ease-out;
+}
+.imageStyle{
+  width:95px;
+  opacity: 0.7;
+  filter: alpha(opacity=70);
+  border-radius: 9px;
+  border:solid 3px #8b0000;
+}
+.imageStyle:hover{
+  width:100px;
+  opacity: 1.0;
+  filter: alpha(opacity=100);
+}
+.desc{
+  margin:0px 0 70px 130px;
+}
+.desc:hover{
+  font-size: 18px;
+}
+.tagStyle{
+  background: #5d5d5d;
+  color:#f6f6f6;
+  padding: 3px 9px;
+  border-radius: 9px;
+  margin:0 5px;
+}
+.largeHeader{
+  font-weight: bold;
+  font-size:110px;
+  line-height:100px;
+  color:#5d5d5d;
+}
+#app {
+	min-height: 100vh;
+	background: #BBC7CE;
+}
+
+#app > .row {
+	background: #5d5d5d;
+}
+
+h1 {
+	margin-bottom: 20px;
+}
+
+[v-cloak] {
+  display: none;
+}
+.resultHeader{
+  font-weight: bold;
+  font-size: 25px;
+  color:#5d5d5d;
+}
+.titleStyle{
+  font-size:20px;
+  color:#8b0000;
+  font-weight:bold;
+}
+.content {
+  display: none;
+}
+h3{
+  color:#8b0000;
+  font-size: 30px;
+  font-weight: underline;
+}
+.seeAllButton{
+  margin:100px 0 0;
+  background: #8b0000;
+  padding: 9px 15px;
+  color:#f7f7f7;
+  font-size: 15px;
+
+}
+.seeAllButton:hover{
+  font-weight: bold;
+}
+</style>
+
+</head>
+<body>
+
+  <button class="tablink" onclick="openPage('Webcats', this, '#f7f7f7')"id="defaultOpen">
+     <img src="https://images.vexels.com/media/users/3/143794/isolated/preview/dba7de0b015971549a3e50d611dd32b7-black-cat-silhouette-stretching-by-vexels.png"
+     style="width:45px;height:45px;margin:-9px 0"align="left">
+     <div style="margin:9px 0 0 90px;color:#f7f7f7">Webcats</div></button>
+ <button class="tablink" onclick="openPage('TrySomethingNew', this, '#f7f7f7')" ><div style="margin:9px 0 0 90px;color:#f7f7f7">Try Something New</div></button>
+ <button class="tablink" onclick="openPage('WebtoonQuiz', this, '#f7f7f7')"><div style="margin:9px 0 0 90px;color:#f7f7f7">Webtoon Quiz</div></button>
+ <button class="tablink" onclick="openPage('WhatShouldYouRead', this, '#f7f7f7')"><div style="margin:9px 0 0 90px;color:#f7f7f7">What Should You Read?</div></button>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <div style="background-color:#f7f7f7;padding:240px 300px"style="width:100%;padding:0"id="Webcats"class="tabcontent">
+    <span class="largeHeader"id="largeHeader"><span style="color:#8b0000">WEBCATS: </span><BR>
+    BEST
+    <br>
+    WEB
+    <br>
+    TOONS
+<br></span>
+<button class="seeAllButton"id="seeAllButton"onclick="showImages()">See all our favorites</button>
+<div style="margin-top:150px;transition:0.5 ease-out;display:none"id="firstPage">
+  <h3>OUR FAVORITE WEBTOONS:</H3>
+  <div style="border-top:solid 2px #8b0000;margin:9px 0 50px"></div>
+      <p id ="page1"></p></div></div>
+
+
+</div>
+
+<left>
+<script>
+
+
+function showImages(){
+  var header = document.getElementById("largeHeader");
+  var button = document.getElementById("seeAllButton");
+  var images = document.getElementById("firstPage");
+  header.style.display = "inline-block";
+  header.style.margin ="-20px 0";
+  button.style.display ="none";
+  images.style.display ="block";
+}
+
+var tab = document.getElementsByClassName('tablinks');
+
+var hash =[];
+for (var i =0; i<webtoon.length;i+=1){
+  hash.push(webtoon[i].tags);
+}
+arrayLength = webtoon.length;
+
+pics = "";
+function webtoonInfo(){
+  for (var i = 0; i < arrayLength; i++) {
+      pics += '<a class="webtoonLink" href="'+webtoon[i].link+ '"><img align="left"class="imageStyle" src ="'
+      +webtoon[i].image+ '"></a><div class="desc">' + '<div class="titleStyle">' +
+      webtoon[i].name + '</div><br><b class="tags">Tags: </b>';
+      var tagsLength = Object.keys(hash[i]).length;
+
+      for(var j = 0; j < tagsLength; j++){
+        var currentTag = hash[i];
+        pics += '<span class="tagStyle">'+ currentTag[j] +'</span>';
+      }
+      pics += '</div>';
+  }
+}
+webtoonInfo();
+document.getElementById("page1").innerHTML = pics;
+</script></left>
+
+  </div>
+</button>
+<div id="TrySomethingNew" class="tabcontent" style="background-color:#f7f7f7;padding:200px 300px">
+  <span class="largeHeader"style="font-size:70px;line-height:90px">
+Here's
+<br>
+A
+<br>
+<span style="color:#8b0000">Random</span>
+<br>Webtoon!</span>
+<br><br><br>
+<p id="random"style="margin-top:15px"></p>
+
+<script>
+
+var rand = Math.floor(Math.random() * webtoon.length);
+var printRandom ="";
+printRandom += '<a class="webtoonLink" href="'+webtoon[rand].link+ '"><img align="left"class="imageStyle" src ="'
++webtoon[rand].image+ '"></a><div class="desc">' + '<div class="titleStyle">' +
+webtoon[rand].name + '</div><br><b class="tags">Tags: </b>';
+var tagsLength = Object.keys(hash[rand]).length;
+
+for(var j = 0; j < tagsLength; j++){
+  var currentTag = hash[rand];
+  printRandom += '<span class="tagStyle">'+ currentTag[j] +'</span>';
+}
+printRandom += '</div>';
+document.getElementById("random").innerHTML = printRandom;
+</script>
+
+
+</div>
+
+<div id="WebtoonQuiz" class="tabcontent"
+style="background-color:#f7f7f7;padding:200px 300px;font-size:19px;line-height:24px">
+  <span class="headerStuff"style="font-size:85px;line-height:80px">Take<br>Our<br>
+    <span style="color:#8b0000">Quiz!</span></span >
+<br><br>
+
+      <p><div class="quizHeader">Choose your preferred weather: </div><br>
+      <input type="radio" name="weather" value="Romance/Drama/Fantasy">Sunny<br>
+      <input type="radio" name="weather" value="SliceOfLife/Comedy/SchoolLife">Windy<br>
+      <input type="radio" name="weather" value="Action/Mystery/Adventure">Snowy<br>
+      <input type="radio" name="weather" value="Tragedy/Thriller/psychological">Rainy<br><br>
+      </p>
+
+      <p><div class="quizHeader">Choose your preferred vacation: </div><BR>
+      <input type="radio" name="vacation" value="Romance/Drama/Fantasy">Beach<br>
+      <input type="radio" name="vacation" value="SliceOfLife/Comedy/SchoolLife">Desert<br>
+      <input type="radio" name="vacation" value="Action/Mystery/Adventure">Mountain<BR>
+      <input type="radio" name="vacation" value="Action/Mystery/Adventure">Hell<BR>
+      <input type="radio" name="vacation" value="Tragedy/Thriller/psychological">Island<BR><br>
+      </p>
+
+      <p><div class="quizHeader">Choose a type of music: </div><BR>
+      <input type="radio" name="music" value="Romance/Drama/Fantasy">Pop<BR>
+      <input type="radio" name="music" value="SliceOfLife/Comedy/SchoolLife">Alternative<BR>
+      <input type="radio" name="music" value="Action/Mystery/Adventure">Hip Hop<BR>
+      <input type="radio" name="music" value="Action/Mystery/Adventure">Foreign Music<BR>
+        <input type="radio" name="music" value="Action/Mystery/Adventure">Country<BR>
+
+      <input type="radio" name="music" value="Tragedy/Thriller/psychological">Rock<BR><br>
+      </p>
+
+      <p><div class="quizHeader">If you had a superpower, what would it be? </div><BR>
+      <input type="radio" name="superpower" value="Romance/Drama/Fantasy">Time Travel<BR>
+      <input type="radio" name="Isuperpower" value="SliceOfLife/Comedy/SchoolLife">Flight<BR>
+      <input type="radio" name="superpower" value="Action/Mystery/Adventure">Super Speed<BR>
+        <input type="radio" name="superpower" value="Action/Mystery/Adventure">Pyrokinesis<BR>
+          <input type="radio" name="superpower" value="Action/Mystery/Adventure">Mind Control<BR>
+      <input type="radio" name="superpower" value="Action/Mystery/Adventure">Shapeshifting<BR>
+      <input type="radio" name="superpower" value="Tragedy/Thriller/psychological">Telekinesis<BR><br>
+      </p>
+
+      <p><div class="quizHeader">Choose your favorite type of ice cream: </div><BR>
+      <input type="radio" name="ice cream" value="Romance/Drama/Fantasy">Vanilla<BR>
+      <input type="radio" name="ice cream" value="SliceOfLife/Comedy/SchoolLife">Chocolate<BR>
+      <input type="radio" name="ice cream" value="Action/Mystery/Adventure">Strawberry<BR>
+      <input type="radio" name="ice cream" value="Tragedy/Thriller/psychological">Mint<BR><br>
+      </p>
+
+      <p><div class="quizHeader">What do you put on your pizza? </div><BR>
+      <input type="radio" name="pizza" value="Romance/Drama/Fantasy">Pineapple<BR>
+      <input type="radio" name="pizza" value="SliceOfLife/Comedy/SchoolLife">Vegetables<BR>
+      <input type="radio" name="pizza" value="Action/Mystery/Adventure">Pepperoni<BR>
+        <input type="radio" name="pizza" value="Action/Mystery/Adventure">Mushrooms<BR>
+      <input type="radio" name="pizza" value="Tragedy/Thriller/psychological">Nothing, I like it plain<BR><br>
+      </p>
+
+      <p><div class="quizHeader">What do you do on a rainy day? </div><BR>
+      <form id="quizQuestion"><input type="radio" name="rainy day" value="Romance/Drama/Fantasy">Go see a movie with some friends!<BR>
+      <input type="radio" name="rainy day" value="SliceOfLife/Comedy/SchoolLife">Curl up with a good book<BR>
+      <input type="radio" name="rainy day" value="Action/Mystery/Adventure">Binge watch my favorite TV show<BR>
+      <input type="radio" name="rainy day" value="Tragedy/Thriller/psychological">Go play in the rain!<BR><br>
+
+    <button type="submit"class="submitButton"style="font-size:18px;padding:9px 20px">Submit</button></form>
+
+    <br><p id ="quizResults"></p>
+    </div>
+
+</div>
+
+<div id="WhatShouldYouRead" class="tabcontent" style="background-color: #f7f7f7;padding:230px 300px">
+  <span class="headerStuff">
+What
+<br>
+Webtoon
+<br>
+Should
+<br>
+<span style="color:#8b0000">
+  You</span>
+<br>Read?
+ </span>
+<p>
+
+    <b>Search By Tag Or By Title: </b> <span><form id="search"style=" ">
+      <input type="text" placeholder="eg: Fantasy" name="search"class="searchButton"
+      id="input"title="Search by tag or by webtoon title!">
+          <button type="submit"class="submitButton"
+          onclick="document.getElementById("results[]").value = ''">Search</button></form></span>
+  <br>
+  <p id ="results"></p>
+
+</div>
+
+<script>
+var fantasy = [];
+var sliceoflife =[];
+var adventure =[];
+var thriller =[];
+
+for (var i = 0; i < webtoon.length; i++){
+  var tagsLength = Object.keys(hash[i]).length;
+  for (var j = 0; j < tagsLength; j++ ){
+    var currentTag = hash[i];
+    if(currentTag[j] == "fantasy"){
+      fantasy.push(webtoon[i]);
+    }else if(currentTag[j] == "slice of life"){
+      sliceoflife.push(webtoon[i]);
+    }else if(currentTag[j] == "adventure"){
+      adventure.push(webtoon[i]);
+    }else if(currentTag[j]=="thriller"){
+      thriller.push(webtoon[i]);
+    }
+  }
+}
+var fantasyHash =[];
+for (var i =0; i<fantasy.length;i+=1){
+  fantasyHash.push(fantasy[i].tags);
+}
+var solHash =[];
+for (var i =0; i<sliceoflife.length;i+=1){
+  solHash.push(sliceoflife[i].tags);
+}
+var adventureHash =[];
+for (var i =0; i<adventure.length;i+=1){
+  adventureHash.push(adventure[i].tags);
+}
+var thrillerHash =[];
+for (var i =0; i<thriller.length;i+=1){
+  thrillerHash.push(thriller[i].tags);
+}
+
+var choice1 = Math.floor(Math.random() * fantasy.length);
+var choice2 = Math.floor(Math.random() * sliceoflife.length);
+var choice3 = Math.floor(Math.random() * adventure.length);
+var choice4 = Math.floor(Math.random() * thriller.length);
+
+
+var radios = document.getElementsByName("rainy day");
+$('#quizQuestion').submit(function( event ){
+  event.preventDefault();
+  var printQuizResult ="";
+  length = radios.length;
+  if(radios[0].checked){
+    printQuizResult += '<br><span class="resultHeader">Here is your recommended webtoon!</span><br><br>';
+    printQuizResult += '<a class="webtoonLink" href="'+fantasy[choice1].link+ '"><img align="left"class="imageStyle" src ="'
+    +fantasy[choice1].image+ '"></a><div class="desc">' + '<div class="titleStyle">' +
+    fantasy[choice1].name + '</div><br><b class="tags">Tags: </b>';
+    var tagsLength = Object.keys(fantasyHash[choice1]).length;
+
+    for(var j = 0; j < tagsLength; j++){
+      var currentTag = fantasyHash[choice1];
+      printQuizResult += '<span class="tagStyle">'+ currentTag[j] +'</span>';
+    }
+    printQuizResult += '</div>';
+  }else if(radios[1].checked){
+    printQuizResult += '<br><span class="resultHeader">Here is your recommended webtoon!</span><br><br>';
+    printQuizResult += '<a class="webtoonLink" href="'+sliceoflife[choice2].link+ '"><img align="left"class="imageStyle" src ="'
+    +sliceoflife[choice2].image+ '"></a><div class="desc">' + '<div class="titleStyle">' +
+    sliceoflife[choice2].name + '</div><br><b class="tags">Tags: </b>';
+    var tagsLength = Object.keys(solHash[choice2]).length;
+
+    for(var j = 0; j < tagsLength; j++){
+      var currentTag = solHash[choice2];
+      printQuizResult += '<span class="tagStyle">'+ currentTag[j] +'</span>';
+    }
+    printQuizResult += '</div>';
+  }else if(radios[2].checked){
+    printQuizResult += '<br><span class="resultHeader">Here is your recommended webtoon!</span><br><br>';
+    printQuizResult += '<a class="webtoonLink" href="'+adventure[choice3].link+ '"><img align="left"class="imageStyle" src ="'
+    +adventure[choice3].image+ '"></a><div class="desc">' + '<div class="titleStyle">' +
+    adventure[choice3].name + '</div><br><b class="tags">Tags: </b>';
+    var tagsLength = Object.keys(adventureHash[choice3]).length;
+
+    for(var j = 0; j < tagsLength; j++){
+      var currentTag = adventureHash[choice3];
+      printQuizResult += '<span class="tagStyle">'+ currentTag[j] +'</span>';
+    }
+    printQuizResult += '</div>';
+  }else if(radios[3].checked){
+    printQuizResult += '<br><span class="resultHeader">Here is your recommended webtoon!</span><br><br>';
+    printQuizResult += '<a class="webtoonLink" href="'+thriller[choice4].link+ '"><img align="left"class="imageStyle" src ="'
+    +thriller[choice4].image+ '"></a><div class="desc">' + '<div class="titleStyle">' +
+    thriller[choice4].name + '</div><br><b class="tags">Tags: </b>';
+    var tagsLength = Object.keys(thrillerHash[choice4]).length;
+
+    for(var j = 0; j < tagsLength; j++){
+      var currentTag = thrillerHash[choice4];
+      printQuizResult += '<span class="tagStyle">'+ currentTag[j] +'</span>';
+    }
+    printQuizResult += '</div>';
+  }
+
+  document.getElementById("quizResults").innerHTML = printQuizResult;
+});
+
+
+  $( "#search" ).submit(function( event ){
+    var printResult = "";
+    var textBox = document.getElementById("input");
+    var search1 = textBox.value;
+    console.log(search1);
+    event.preventDefault();
+    webtoonLength = webtoon.length;
+
+    for (var i = 0; i < webtoonLength; i++) {
+      var tagsLength = Object.keys(hash[i]).length;
+      console.log(tagsLength);
+      for (var j = 0; j < tagsLength; j++ ){
+        var currentTag = hash[i];
+        if(search1.toLowerCase() == currentTag[j].toLowerCase()){
+          printResult += '<a class="webtoonLink" href="'+webtoon[i].link+ '"><img align="left"class="imageStyle" src ="'
+          +webtoon[i].image+ '"></a><div class="desc">' + '<div class="titleStyle">' +
+          webtoon[i].name + '</div><br><b class="tags">Tags: </b>';
+          for(var k = 0; k < tagsLength; k++){
+            var currentTag = hash[i];
+            printResult += '<span class="tagStyle">'+ currentTag[k] +'</span>';
+          }
+          printResult += '</div>';
+          console.log(printResult);
+        }
+      }
+      if (search1.toLowerCase() == webtoon[i].name.toLowerCase()){
+        printResult += '<a class="webtoonLink" href="'+webtoon[i].link+ '"><img align="left"class="imageStyle" src ="'
+        +webtoon[i].image+ '"></a><div class="desc">' + '<div class="titleStyle">' +
+        webtoon[i].name + '</div><br><b class="tags">Tags: </b>';
+        for(var k = 0; k < tagsLength; k++){
+          var currentTag = hash[i];
+          printResult += '<span class="tagStyle">'+ currentTag[k] +'</span>';
+        }
+        printResult += '</div>';
+      }
+    document.getElementById("results").innerHTML = printResult;
+    }
+  });
+
+
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+
+</body>
+</html>
